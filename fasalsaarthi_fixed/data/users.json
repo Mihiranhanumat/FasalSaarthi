@@ -1,0 +1,16 @@
+{
+  "demo": {
+    "password": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791",
+    "name": "Demo Farmer",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "joined": "2026-03-25"
+  },
+  "mnv": {
+    "password": "8cdd33c32babcc08db3cd8bd92e98bc1e0bdd839c2492d0ea3f4889da05e4135",
+    "name": "mn",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "joined": "2026-03-25"
+  }
+}
