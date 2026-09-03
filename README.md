@@ -3,8 +3,10 @@
 # 🌾 FASALSAARTHI (फसल साथी)
 ### *Explainable & Confidence-Calibrated AI Decision Intelligence Framework for Farmers*
 
+[![Live Demo](https://img.shields.io/badge/Streamlit%20Cloud-Live%20App-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/)
+
 [![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)](https://plotly.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker&logoColor=white)](Dockerfile)
@@ -18,7 +20,13 @@
 
 <br/>
 
-[🌟 Features](#-key-features) • [🏗️ Architecture](#️-system-architecture) • [🚀 Quick Start](#-quick-start-guide) • [☁️ Deployment](#️-deployment-guide) • [🧠 AI Models](#-ai--ml-engine-specifications) • [🌐 Localization](#-multilingual-support) • [📞 Helplines](#-farmer-helplines)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/)
+
+**🔗 Live Production App:** [https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/)
+
+<br/>
+
+[🚀 Live Demo](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/) • [🌟 Features](#-key-features) • [🏗️ Architecture](#️-system-architecture) • [🚀 Quick Start](#-quick-start-guide) • [☁️ Deployment](#️-deployment-guide) • [🧠 AI Models](#-ai--ml-engine-specifications) • [🌐 Localization](#-multilingual-support) • [📞 Helplines](#-farmer-helplines)
 
 ---
 
@@ -173,19 +181,17 @@ Visit `http://localhost:8501` in your browser.
 
 ---
 
-## ☁️ Deployment Guide (Streamlit Community Cloud)
+## ☁️ Live Cloud Deployment (Streamlit Community Cloud)
 
-To deploy FasalSaarthi for free on **Streamlit Community Cloud**:
+The application is deployed live in production:
 
-1. Fork or push this repository to your GitHub account: `https://github.com/Mihiranhanumat/FasalSaarthi`.
-2. Visit [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.
-3. Click **"New app"**.
-4. Configure your repository settings:
-   - **Repository:** `Mihiranhanumat/FasalSaarthi`
-   - **Branch:** `main`
-   - **Main file path:** `app.py`
-5. Click **"Deploy!"**.
-6. Your live web application will be accessible across the globe! 🚀
+> 🌐 **Live URL:** [https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/](https://fasalsaarthi-azzwdpehu6appaehtiwgqsy.streamlit.app/)
+
+### Continuous Deployment Pipeline:
+- **Repository:** `Mihiranhanumat/FasalSaarthi`
+- **Branch:** `main`
+- **Entry Point:** `app.py`
+- **Auto-Sync:** Enabled (all updates pushed to the `main` branch automatically rebuild and deploy within 60 seconds).
 
 ---
 
