@@ -52,90 +52,136 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
 :root{--g1:#0a2e0a;--g2:#1b5e20;--g3:#2e7d32;--g4:#43a047;--g5:#66bb6a;
-     --gp:#e8f5e9;--gold:#f9a825;--bg:#f4faf4;--card:#fff;--border:#e8f0e8;
-     --text:#1a2e1a;--muted:#6b7c6b;
+     --gp:#e8f5e9;--gold:#f9a825;--bg:#f4faf4;--card:#ffffff;--border:#e0ede0;
+     --text:#111827;--muted:#4b5563;
      --sh:0 2px 16px rgba(0,60,0,.07);--shl:0 8px 40px rgba(0,60,0,.13);--r:16px;}
 *{font-family:'Inter',sans-serif!important}
-[data-testid="stAppViewContainer"]{background:var(--bg)!important}
-[data-testid="stMain"]{padding-top:0!important}
+
+/* Base containers & typography */
+[data-testid="stAppViewContainer"]{background:var(--bg)!important;color:#111827!important}
+[data-testid="stMain"]{padding-top:0!important;color:#111827!important}
+[data-testid="stMain"] p, [data-testid="stMain"] span, [data-testid="stMain"] label, [data-testid="stMain"] li{color:#111827}
+[data-testid="stMain"] h1, [data-testid="stMain"] h2, [data-testid="stMain"] h3, [data-testid="stMain"] h4, [data-testid="stMain"] h5, [data-testid="stMain"] h6{color:#0a2e0a!important;font-weight:700!important}
+
+/* Sidebar styling */
 [data-testid="stSidebar"]{background:linear-gradient(170deg,#061806,#0f3d0f,#1b5e20,#2e7d32)!important}
 [data-testid="stSidebar"] *{color:#d7f0d7!important}
 [data-testid="stSidebar"] .stSelectbox label{color:#8bc98b!important;font-size:.75rem!important;text-transform:uppercase;letter-spacing:.5px}
-[data-testid="stSidebar"] .stSelectbox [data-baseweb="select"]{background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:8px!important}
-[data-testid="stSidebar"] .stButton button{background:rgba(255,255,255,.07)!important;color:#c8e6c9!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:10px!important;font-size:.85rem!important;padding:9px 14px!important;text-align:left!important;width:100%!important;transition:all .18s!important;margin:2px 0!important;font-weight:500!important}
-[data-testid="stSidebar"] .stButton button:hover{background:rgba(255,255,255,.16)!important;color:#fff!important;border-color:rgba(255,255,255,.28)!important;transform:translateX(4px)!important}
-.stButton>button{background:linear-gradient(135deg,#2e7d32,#43a047)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:600!important;font-size:.9rem!important;padding:10px 22px!important;box-shadow:0 4px 14px rgba(46,125,50,.32)!important;transition:all .18s!important}
-.stButton>button:hover{transform:translateY(-2px)!important;box-shadow:0 7px 22px rgba(46,125,50,.42)!important}
-.hero{background:linear-gradient(135deg,#061806,#1b5e20,#2e7d32,#43a047);padding:36px 32px;border-radius:22px;color:#fff;margin-bottom:28px;position:relative;overflow:hidden;box-shadow:0 12px 48px rgba(0,60,0,.22)}
-.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:rgba(255,255,255,.03);border-radius:50%}
-.hero h1{font-family:'Playfair Display',serif!important;font-size:2.6rem;margin:0;font-weight:800;letter-spacing:-1px;position:relative;z-index:1}
-.hero p{font-size:.98rem;opacity:.82;margin:8px 0 0;font-weight:300;position:relative;z-index:1}
-.hero-pill{display:inline-block;background:rgba(249,168,37,.18);border:1px solid rgba(249,168,37,.38);color:#ffd54f;padding:4px 14px;border-radius:20px;font-size:.72rem;font-weight:700;margin-bottom:12px;letter-spacing:1.5px;position:relative;z-index:1}
-.gcard{background:rgba(255,255,255,.96);border-radius:var(--r);padding:22px 20px;box-shadow:var(--sh);border:1px solid var(--border);transition:all .22s;position:relative;overflow:hidden}
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="select"]{background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.2)!important;border-radius:8px!important}
+[data-testid="stSidebar"] .stButton button{background:rgba(255,255,255,.07)!important;color:#c8e6c9!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:10px!important;font-size:.85rem!important;padding:9px 14px!important;text-align:left!important;width:100%!important;transition:all .18s!important;margin:2px 0!important;font-weight:500!important}
+[data-testid="stSidebar"] .stButton button:hover{background:rgba(255,255,255,.2)!important;color:#fff!important;border-color:rgba(255,255,255,.35)!important;transform:translateX(4px)!important}
+
+/* Primary buttons */
+.stButton>button{background:linear-gradient(135deg,#2e7d32,#43a047)!important;color:#ffffff!important;border:none!important;border-radius:10px!important;font-weight:700!important;font-size:.9rem!important;padding:10px 22px!important;box-shadow:0 4px 14px rgba(46,125,50,.32)!important;transition:all .18s!important}
+.stButton>button:hover{transform:translateY(-2px)!important;box-shadow:0 7px 22px rgba(46,125,50,.42)!important;color:#ffffff!important}
+
+/* Hero section */
+.hero{background:linear-gradient(135deg,#061806,#1b5e20,#2e7d32,#43a047);padding:36px 32px;border-radius:22px;color:#ffffff;margin-bottom:28px;position:relative;overflow:hidden;box-shadow:0 12px 48px rgba(0,60,0,.22)}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:rgba(255,255,255,.04);border-radius:50%}
+.hero h1{font-family:'Playfair Display',serif!important;font-size:2.6rem;margin:0;font-weight:800;letter-spacing:-1px;position:relative;z-index:1;color:#ffffff!important}
+.hero p{font-size:.98rem;opacity:.9;margin:8px 0 0;font-weight:300;position:relative;z-index:1;color:#ffffff!important}
+.hero-pill{display:inline-block;background:rgba(249,168,37,.2);border:1px solid rgba(249,168,37,.45);color:#ffd54f!important;padding:4px 14px;border-radius:20px;font-size:.72rem;font-weight:700;margin-bottom:12px;letter-spacing:1.5px;position:relative;z-index:1}
+
+/* Cards & Containers */
+.gcard{background:#ffffff;border-radius:var(--r);padding:22px 20px;box-shadow:var(--sh);border:1px solid var(--border);transition:all .22s;position:relative;overflow:hidden}
 .gcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2e7d32,#66bb6a);border-radius:var(--r) var(--r) 0 0}
-.gcard:hover{transform:translateY(-4px);box-shadow:var(--shl);border-color:#c8e6c9}
+.gcard:hover{transform:translateY(-4px);box-shadow:var(--shl);border-color:#a5d6a7}
 .gcard:hover::before{background:linear-gradient(90deg,#f9a825,#ffca28)}
 .gcard .gc-icon{font-size:2.4rem;margin-bottom:12px;display:block}
-.gcard h3{font-size:.95rem;font-weight:700;color:var(--g1);margin:0 0 6px}
-.gcard p{font-size:.8rem;color:var(--muted);margin:0;line-height:1.55}
-.scard{background:var(--card);border-radius:12px;padding:16px;text-align:center;box-shadow:var(--sh);border:1px solid var(--border)}
-.scard .sv{font-size:1.9rem;font-weight:800;background:linear-gradient(135deg,#2e7d32,#43a047);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.scard .sl{font-size:.72rem;color:var(--muted);margin-top:2px;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
-.rbanner{border-radius:var(--r);padding:28px 24px;text-align:center;color:#fff;margin-bottom:14px;box-shadow:var(--sh)}
+.gcard h3{font-size:.95rem;font-weight:700;color:#0a2e0a!important;margin:0 0 6px}
+.gcard p{font-size:.82rem;color:#4b5563!important;margin:0;line-height:1.55}
+
+.scard{background:#ffffff;border-radius:12px;padding:16px;text-align:center;box-shadow:var(--sh);border:1px solid var(--border)}
+.scard .sv{font-size:1.9rem;font-weight:800;background:linear-gradient(135deg,#1b5e20,#2e7d32);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.scard .sl{font-size:.74rem;color:#4b5563!important;margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+
+.rbanner{border-radius:var(--r);padding:28px 24px;text-align:center;color:#ffffff;margin-bottom:14px;box-shadow:var(--sh)}
+.rbanner *{color:#ffffff!important}
 .rbanner .rv{font-size:3.2rem;font-weight:900;letter-spacing:-2px;line-height:1}
-.rbanner .rl{font-size:.88rem;opacity:.82;font-weight:300;margin-top:4px}
-.ic{background:var(--card);border-radius:10px;padding:14px 16px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,.05);border:1px solid var(--border)}
-.ic.s{border-left:4px solid #2e7d32;background:#f0faf0}.ic.w{border-left:4px solid #f57c00;background:#fff8f0}
-.ic.d{border-left:4px solid #c62828;background:#fff5f5}.ic.n{border-left:4px solid #1565c0;background:#f0f6ff}
-.ic.g{border-left:4px solid #f9a825;background:#fffde7}
-.pcard{background:#fff;border-radius:12px;padding:16px 18px;margin:10px 0;box-shadow:0 2px 10px rgba(0,0,0,.06);border:1px solid #e8f0e8;border-left:4px solid #2e7d32;transition:all .18s}
+.rbanner .rl{font-size:.88rem;opacity:.9;font-weight:400;margin-top:4px}
+
+/* Info & Callout Boxes (High Contrast) */
+.ic{background:#ffffff!important;border-radius:10px;padding:14px 16px;margin:8px 0;box-shadow:0 1px 6px rgba(0,0,0,.05);border:1px solid #d1e7dd;color:#111827!important}
+.ic *{color:#111827!important}
+.ic b, .ic strong{color:#0a2e0a!important;font-weight:700!important}
+.ic.s{border-left:4px solid #2e7d32!important;background:#e8f5e9!important}
+.ic.w{border-left:4px solid #f57c00!important;background:#fff3e0!important}
+.ic.d{border-left:4px solid #c62828!important;background:#ffebee!important}
+.ic.n{border-left:4px solid #1565c0!important;background:#e3f2fd!important}
+.ic.g{border-left:4px solid #f9a825!important;background:#fffde7!important}
+
+/* Product & Result Cards */
+.pcard{background:#ffffff;border-radius:12px;padding:16px 18px;margin:10px 0;box-shadow:0 2px 10px rgba(0,0,0,.06);border:1px solid #e8f0e8;border-left:4px solid #2e7d32;transition:all .18s}
 .pcard:hover{box-shadow:0 4px 20px rgba(0,0,0,.1)}
-.pcard .pcat{font-size:.7rem;font-weight:700;color:#1b5e20;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
-.pcard .pname{font-size:1rem;font-weight:700;color:#0a2e0a;margin:0 0 3px}
-.pcard .pbrand{font-size:.8rem;color:#43a047;font-weight:600;margin-bottom:10px}
-.pcard table{width:100%;border-collapse:collapse;font-size:.8rem}
-.pcard td{padding:4px 8px;border-bottom:1px solid #f0f5f0;vertical-align:top}
-.pcard td:first-child{color:var(--muted);width:35%;font-weight:500}
-.pcard td:last-child{font-weight:600;color:var(--text)}
-.crc{background:#fff;border-radius:14px;padding:16px;margin:8px 0;box-shadow:var(--sh);border:1px solid var(--border);display:flex;align-items:center;gap:14px;transition:all .18s}
-.crc:hover{box-shadow:var(--shl);border-color:#c8e6c9}
+.pcard .pcat{font-size:.72rem;font-weight:700;color:#1b5e20!important;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.pcard .pname{font-size:1.05rem;font-weight:700;color:#0a2e0a!important;margin:0 0 3px}
+.pcard .pbrand{font-size:.82rem;color:#2e7d32!important;font-weight:600;margin-bottom:10px}
+.pcard table{width:100%;border-collapse:collapse;font-size:.82rem}
+.pcard td{padding:5px 8px;border-bottom:1px solid #f0f5f0;vertical-align:top;color:#111827!important}
+.pcard td:first-child{color:#4b5563!important;width:35%;font-weight:600}
+.pcard td:last-child{font-weight:700;color:#111827!important}
+
+.crc{background:#ffffff;border-radius:14px;padding:16px;margin:8px 0;box-shadow:var(--sh);border:1px solid var(--border);display:flex;align-items:center;gap:14px;transition:all .18s}
+.crc:hover{box-shadow:var(--shl);border-color:#a5d6a7}
 .crc.best{border:2px solid #2e7d32;background:linear-gradient(135deg,#f0faf0,#e8f5e9)}
 .crc .cre{font-size:2.2rem;flex-shrink:0}
-.crc .crd h4{margin:0;font-size:.95rem;font-weight:700;color:var(--g1)}
-.crc .crd p{margin:2px 0 0;font-size:.76rem;color:var(--muted)}
+.crc .crd h4{margin:0;font-size:.95rem;font-weight:700;color:#0a2e0a!important}
+.crc .crd p{margin:2px 0 0;font-size:.78rem;color:#4b5563!important}
 .crc .crp{margin-left:auto;text-align:right;flex-shrink:0}
-.crc .crp .pct{font-size:1.4rem;font-weight:800;color:#2e7d32}
-.crc .crp .plb{font-size:.68rem;color:var(--muted)}
-/* Chat */
-.chat-box{background:#fff;border-radius:var(--r);padding:20px;box-shadow:var(--sh);border:1px solid var(--border);min-height:440px;max-height:540px;overflow-y:auto}
+.crc .crp .pct{font-size:1.4rem;font-weight:800;color:#2e7d32!important}
+.crc .crp .plb{font-size:.68rem;color:#4b5563!important}
+
+/* Chat interface */
+.chat-box{background:#ffffff;border-radius:var(--r);padding:20px;box-shadow:var(--sh);border:1px solid var(--border);min-height:440px;max-height:540px;overflow-y:auto}
 .msg-b{display:flex;gap:10px;margin:10px 0;align-items:flex-start}
-.msg-b .av{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1b5e20,#43a047);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.msg-b .bbl{background:#f8fdf8;border-radius:4px 16px 16px 16px;padding:12px 16px;max-width:84%;font-size:.88rem;line-height:1.65;border:1px solid #d0e8d0;color:#1a2e1a}
+.msg-b .av{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1b5e20,#43a047);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff!important}
+.msg-b .bbl{background:#f8fdf8;border-radius:4px 16px 16px 16px;padding:12px 16px;max-width:84%;font-size:.88rem;line-height:1.65;border:1px solid #c8e6c9;color:#111827!important}
+.msg-b .bbl *{color:#111827!important}
 .msg-u{display:flex;gap:10px;margin:10px 0;align-items:flex-start;flex-direction:row-reverse}
-.msg-u .av{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1565c0,#42a5f5);display:flex;align-items:center;justify-content:center;font-size:1rem}
-.msg-u .bbl{background:linear-gradient(135deg,#1b5e20,#2e7d32);color:#fff;border-radius:16px 4px 16px 16px;padding:12px 16px;max-width:78%;font-size:.88rem;line-height:1.65}
-.mt{font-size:.68rem;opacity:.45;margin-top:4px}
-/* Voice button */
-.voice-btn{background:linear-gradient(135deg,#1b5e20,#43a047);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:1.2rem;cursor:pointer;box-shadow:0 3px 10px rgba(46,125,50,.4);transition:all .2s;display:flex;align-items:center;justify-content:center}
-.voice-btn:hover{transform:scale(1.1);box-shadow:0 5px 16px rgba(46,125,50,.5)}
-.voice-btn.recording{background:linear-gradient(135deg,#c62828,#e53935);animation:pulse 1s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(198,40,40,.4)}50%{box-shadow:0 0 0 8px rgba(198,40,40,0)}}
-/* Confidence bar */
+.msg-u .av{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#1565c0,#42a5f5);display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff!important}
+.msg-u .bbl{background:linear-gradient(135deg,#1b5e20,#2e7d32);color:#ffffff!important;border-radius:16px 4px 16px 16px;padding:12px 16px;max-width:78%;font-size:.88rem;line-height:1.65}
+.msg-u .bbl *{color:#ffffff!important}
+.mt{font-size:.68rem;opacity:.65;margin-top:4px}
+
+/* Badges */
 .cw{background:#e8f5e9;border-radius:6px;height:8px;margin:6px 0;overflow:hidden}
 .cf{height:8px;border-radius:6px;transition:width .7s ease}
 .badge{display:inline-flex;align-items:center;gap:3px;padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
-.bg{background:#dcf0dc;color:#1b5e20}.by{background:#fff9c4;color:#e65100}.br{background:#ffd7d7;color:#b71c1c}
-.ds-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:20px;padding:4px 12px;font-size:.76rem;font-weight:600;color:#1b5e20;margin:2px 4px}
-.stTextInput input,.stNumberInput input{border-radius:10px!important;border:1.5px solid #c8e6c9!important;padding:10px 14px!important;font-size:.9rem!important}
-.stTextInput input:focus,.stNumberInput input:focus{border-color:#2e7d32!important;box-shadow:0 0 0 3px rgba(46,125,50,.1)!important}
-.stTextInput label,.stSelectbox label,.stNumberInput label{font-weight:600!important;color:#1b5e20!important;font-size:.82rem!important;text-transform:uppercase!important;letter-spacing:.4px!important}
-.stSelectbox [data-baseweb="select"]{border-radius:10px!important;border:1.5px solid #c8e6c9!important}
+.bg{background:#dcf0dc;color:#1b5e20!important}.by{background:#fff9c4;color:#b45309!important}.br{background:#ffd7d7;color:#b71c1c!important}
+.ds-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:20px;padding:4px 12px;font-size:.76rem;font-weight:600;color:#1b5e20!important;margin:2px 4px}
+
+/* Form Inputs & Controls (High Contrast Black/Dark Text) */
+.stTextInput input, .stNumberInput input{background:#ffffff!important;color:#111827!important;border-radius:10px!important;border:1.5px solid #a5d6a7!important;padding:10px 14px!important;font-size:.95rem!important;font-weight:600!important}
+.stTextInput input:focus, .stNumberInput input:focus{border-color:#2e7d32!important;box-shadow:0 0 0 3px rgba(46,125,50,.15)!important;color:#111827!important}
+.stTextInput label, .stSelectbox label, .stNumberInput label, .stSlider label, .stMultiSelect label, [data-testid="stWidgetLabel"] p{font-weight:700!important;color:#0f3d0f!important;font-size:.85rem!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+
+/* Select & MultiSelect */
+.stSelectbox [data-baseweb="select"], .stMultiSelect [data-baseweb="select"]{background:#ffffff!important;border-radius:10px!important;border:1.5px solid #a5d6a7!important;color:#111827!important}
+.stSelectbox [data-baseweb="select"] *, .stMultiSelect [data-baseweb="select"] *{color:#111827!important}
+[data-baseweb="popover"], [data-baseweb="menu"], [role="listbox"]{background:#ffffff!important;color:#111827!important}
+[data-baseweb="menu"] *{color:#111827!important}
+
+/* Multiselect chips / tags */
+[data-baseweb="tag"]{background-color:#1b5e20!important;border-radius:6px!important;color:#ffffff!important;font-weight:600!important}
+[data-baseweb="tag"] span, [data-baseweb="tag"] svg{color:#ffffff!important;fill:#ffffff!important}
+
+/* NumberInput stepper buttons */
+[data-testid="stNumberInput"] button{background:#e8f5e9!important;color:#1b5e20!important;border:1px solid #c8e6c9!important}
+[data-testid="stNumberInput"] button svg{fill:#1b5e20!important}
+[data-testid="stNumberInput"] button:hover{background:#c8e6c9!important}
+
+/* Tabs */
 .stTabs [data-baseweb="tab-list"]{gap:6px;background:transparent;border-bottom:2px solid #e8f5e9}
-.stTabs [data-baseweb="tab"]{border-radius:10px 10px 0 0!important;font-weight:600!important;font-size:.83rem!important;padding:8px 16px!important;color:#666!important}
-.stTabs [aria-selected="true"]{background:#e8f5e9!important;color:#1b5e20!important}
+.stTabs [data-baseweb="tab"]{border-radius:10px 10px 0 0!important;font-weight:600!important;font-size:.85rem!important;padding:8px 16px!important;color:#4b5563!important}
+.stTabs [aria-selected="true"]{background:#e8f5e9!important;color:#1b5e20!important;font-weight:700!important}
+
+/* Dataframe */
+[data-testid="stDataFrame"]{background:#ffffff!important;border-radius:10px!important}
+[data-testid="stDataFrame"] *{color:#111827!important}
+
 .fdiv{border:none;height:1px;background:linear-gradient(90deg,transparent,#c8e6c9 30%,#c8e6c9 70%,transparent);margin:24px 0}
-.sh{font-family:'Playfair Display',serif!important;font-size:1.3rem;font-weight:700;color:var(--g1);margin:0 0 4px}
-.ss{color:var(--muted);font-size:.83rem;margin:0 0 16px}
+.sh{font-family:'Playfair Display',serif!important;font-size:1.35rem;font-weight:800;color:#0a2e0a!important;margin:0 0 4px}
+.ss{color:#4b5563!important;font-size:.85rem;margin:0 0 16px;font-weight:500}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:#a5d6a7;border-radius:3px}
@@ -591,7 +637,11 @@ def page_yield():
                              color_continuous_scale='Greens',
                              title=T('typical_yields'))
                 fig.update_layout(height=230, showlegend=False,
-                    margin=dict(l=0,r=0,t=30,b=0),
+                    margin=dict(l=0,r=0,t=35,b=0),
+                    font=dict(color='#111827', family='Inter'),
+                    title_font=dict(color='#0a2e0a', size=14, family='Inter'),
+                    xaxis=dict(tickfont=dict(color='#111827', size=11), title=dict(font=dict(color='#0a2e0a', size=11))),
+                    yaxis=dict(tickfont=dict(color='#111827', size=10), title=dict(font=dict(color='#0a2e0a', size=11))),
                     plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig, use_container_width=True)
 
@@ -631,13 +681,14 @@ def page_yield():
         with gc:
             fig_g = go.Figure(go.Indicator(
                 mode="gauge+number", value=conf,
-                number={'suffix': '%', 'font': {'size': 24}},
-                title={'text': T('confidence'), 'font': {'size': 12}},
-                gauge={'axis': {'range': [0, 100]}, 'bar': {'color': clr},
+                number={'suffix': '%', 'font': {'size': 24, 'color': '#0a2e0a'}},
+                title={'text': T('confidence'), 'font': {'size': 13, 'color': '#0a2e0a'}},
+                gauge={'axis': {'range': [0, 100], 'tickfont': {'color': '#111827'}}, 'bar': {'color': clr},
                        'steps': [{'range': [0,50], 'color': '#fee2e2'},
                                   {'range': [50,75],'color': '#fef9c3'},
                                   {'range': [75,100],'color': '#dcfce7'}]}))
             fig_g.update_layout(height=175, margin=dict(l=10,r=10,t=30,b=5),
+                                 font=dict(color='#111827', family='Inter'),
                                  paper_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_g, use_container_width=True)
         with tc:
@@ -646,8 +697,12 @@ def page_yield():
                 fig_t = px.area(trend, x='Year', y='Yield_Kg_Ha', markers=True,
                                 color_discrete_sequence=['#2e7d32'],
                                 title=f"{T('historical_trend')} — {res['crop']}")
-                fig_t.update_traces(fill='tozeroy', fillcolor='rgba(46,125,50,0.1)')
+                fig_t.update_traces(fill='tozeroy', fillcolor='rgba(46,125,50,0.15)')
                 fig_t.update_layout(height=175, margin=dict(l=0,r=0,t=30,b=0),
+                                     font=dict(color='#111827', family='Inter'),
+                                     title_font=dict(color='#0a2e0a', size=13, family='Inter'),
+                                     xaxis=dict(tickfont=dict(color='#111827', size=10), title=dict(font=dict(color='#0a2e0a', size=11))),
+                                     yaxis=dict(tickfont=dict(color='#111827', size=10), title=dict(font=dict(color='#0a2e0a', size=11))),
                                      plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
                 st.plotly_chart(fig_t, use_container_width=True)
 
@@ -756,11 +811,14 @@ def page_disease():
             fig_t = go.Figure(go.Bar(
                 x=[t['confidence'] for t in top],
                 y=[t['disease']    for t in top],
-                orientation='h', marker_color=['#1b5e20','#66bb6a','#a5d6a7'],
-                text=[f"{t['confidence']}%" for t in top], textposition='outside'))
+                orientation='h', marker_color=['#1b5e20','#43a047','#81c784'],
+                text=[f"{t['confidence']}%" for t in top], textposition='outside',
+                textfont=dict(color='#0a2e0a', size=11, family='Inter')))
             fig_t.update_layout(height=175, showlegend=False,
-                xaxis=dict(range=[0,108], showgrid=False),
+                xaxis=dict(range=[0,108], showgrid=False, tickfont=dict(color='#111827')),
+                yaxis=dict(tickfont=dict(color='#111827', size=11)),
                 margin=dict(l=0,r=55,t=8,b=0),
+                font=dict(color='#111827', family='Inter'),
                 plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig_t, use_container_width=True)
 
@@ -859,8 +917,13 @@ def page_fertilizer():
             x=['N', 'P₂O₅', 'K₂O'], y=[ns['N'], ns['P'], ns['K']],
             marker_color=['#1565c0','#e65100','#2e7d32'],
             text=[f"{v:.0f} kg" for v in [ns['N'],ns['P'],ns['K']]],
-            textposition='outside'))
+            textposition='outside',
+            textfont=dict(color='#0a2e0a', size=12, family='Inter')))
         fig_n.update_layout(title=T('fert_summary'), height=200, showlegend=False,
+            font=dict(color='#111827', family='Inter'),
+            title_font=dict(color='#0a2e0a', size=14, family='Inter'),
+            xaxis=dict(tickfont=dict(color='#111827', size=12)),
+            yaxis=dict(tickfont=dict(color='#111827', size=10)),
             margin=dict(l=0,r=0,t=30,b=0),
             plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         st.plotly_chart(fig_n, use_container_width=True)
